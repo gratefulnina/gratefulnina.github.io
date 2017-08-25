@@ -36,12 +36,25 @@
 						<header class="major">
 							<p>Sign up to get the latest updates & be the first to get my book for free (pdf)!</p>
 						</header>
-						
-						<form class="grid-form" action="//ninanam.us16.list-manage.com/subscribe/post?u=4e96e4f5f694a4bfee03f85f7&amp;id=3591793183" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+						<form class="grid-form" id="signup" action="index.html" method="get">
+							<div class="form-control narrow">
+									<label for="name">First Name</label>
+									<input name="fname" id="fname" type="text">
+								</div>
+								<div class="form-control narrow">
+									<label for="email">Email</label>
+									<input name="email" id="email" type="email">
+								</div>
+								
+								<div class="form-control narrow">
+								<p></p>
 								<ul class="actions">
-									<li><input value="SUBSCRIBE" type="submit" name="subscribe" id="mc-embedded-subscribe" class="button special"></li>
+									<li><input value="SUBSCRIBE" type="submit" name="subscribe" id="SendButton" class="button special"></li>
 								</ul>
+								</div>
 						</form>
+						<div id="message"></div>
 					</div>
 				</section>
 
@@ -133,7 +146,7 @@
 			    $('#signup').submit(function() {
 			        $("#message").html("Adding your email address...");
 			        $.ajax({
-			            url: 'inc/store-address.php', // proper url to your "store-address.php" file
+			            url: 'store-address.php', // proper url to your "store-address.php" file
 			            type: 'POST', // <- IMPORTANT
 			            data: $('#signup').serialize() + '&ajax=true',
 			            success: function(msg) {
