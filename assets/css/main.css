@@ -3132,7 +3132,7 @@
 		}
 
 		#banner p {
-			color: #aaa;
+			color: #ffffff;
 			font-size: 1.5em;
 			margin-bottom: 1.75em;
 			text-transform: none !important;
@@ -3625,4 +3625,8 @@
 }
 .fa-spotify {
     color: #1ED760;
+}
+
+p.tab {
+	text-indent: 5em;
 }
